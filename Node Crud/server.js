@@ -32,6 +32,21 @@ app.post('/login',(req,res)=>{
     }
 });
 
+app.post('/userlogin',(req,res)=>{
+    var username=req.body.username
+    var password=req.body.password
+    var email=req.body.email
+    var dob=req.body.dob
+    var address=req.body.address
+
+    if(email=="yogi@123" && password=="yogi@123")
+    {
+        res.send('login successfull')
+    }else{
+        res.send('login failed...')
+    }
+})
+
 app.listen(3000,function(){
     console.log('server started on port 3000..')
 }) 
